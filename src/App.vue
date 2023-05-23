@@ -8,7 +8,7 @@
             :local-messages="localMessages"
             @messages-loaded="messagesLoaded"
           />
-          <template #fallback> kek </template>
+          <template #fallback>loading...</template>
         </Suspense>
       </div>
       <div class="messenger__add">
