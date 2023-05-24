@@ -36,6 +36,9 @@ async function getMessage(offset = 0) {
   if (!checkLastMessage()) {
     errorAPI.value = null;
     const { messages, error } = await useMessages(offset);
+    if (allMessages.value.includes(messages.value?.result[0])) { //костыль из-за scrollHeight
+      return;
+    }
     if (error) {
       errorAPI.value = error;
       return;

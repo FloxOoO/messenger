@@ -32,11 +32,11 @@ const newMessageSend = ref(false);
 
 onMounted(() => {
   messengerOptions.value.addEventListener("scroll", () => {
-    if (
+    const scrollUp =
       Math.abs(messengerOptions.value.scrollTop) +
-        messengerOptions.value.clientHeight >=
-      messengerOptions.value.scrollHeight
-    ) {
+        messengerOptions.value.clientHeight + 1 >=
+      messengerOptions.value.scrollHeight; //ведет себя по разному при разном масштабе браузера
+    if (scrollUp) {
       loadMessages.value = true;
     }
   });
