@@ -1,5 +1,5 @@
 <template>
-  <div class="backdrop"> //efefef
+  <div class="backdrop">
     <div class="messenger">
       <div class="messenger__container" ref="messengerOptions">
         <Suspense>
